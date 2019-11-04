@@ -1,11 +1,8 @@
 <section id="rentalListing">
   <h1 class="title">Your Home All Around the World</h1>
-  <div *ngFor="let apartment of apartments; index as item" class="row">
-
-    <div class='col-md-3 col-xs-6'>
-      <bwm-rental-list-item></bwm-rental-list-item>
-      <bwm-rental-list-item></bwm-rental-list-item>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let apartment of apartments" >
+      <bwm-rental-list-item [apartment]="apartment"> </bwm-rental-list-item>
     </div>
-
   </div>
 </section>

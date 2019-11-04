@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RentalListItemComponent} from "../rental-list-item/rental-list-item.component";
 import { apartments} from '../../../assets/apartments'
 
 
@@ -10,6 +9,7 @@ import { apartments} from '../../../assets/apartments'
 })
 export class RentalListComponent implements OnInit {
   apartments = apartments;
+
   constructor() {
 
   }
