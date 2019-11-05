@@ -40,5 +40,19 @@ export const apartments = [
     "dailyRate": 24,
     "shared": true,
     "createdAt": "24/12/2018"
+  },
+  {
+    "name": "Vis chocolate trees apartment",
+    "price": 21.99,
+    "id": 3,
+    "city": "Vis",
+    "street": "Ulica jorgovana",
+    "category":"studio",
+    "image": "http://via.placeholder.com/350x250",
+    "bedrooms": 4,
+    "description": "Very nice studio",
+    "dailyRate": 15,
+    "shared": true,
+    "createdAt": "24/12/2018"
   }
 ]

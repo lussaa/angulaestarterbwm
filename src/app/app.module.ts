@@ -5,7 +5,7 @@ import { RentalModule } from "./rental/rental.module";
 
 import { AppComponent } from './app.component';
 import { RentalComponent } from './rental/rental.component';
-import {RouterModule} from "@angular/router";
+import {RouterModule, Routes} from "@angular/router";
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import {RouterModule} from "@angular/router";
     BrowserModule,
     RentalModule,
     RouterModule.forRoot([
-      { path: '', component: RentalComponent }
+      { path: '', redirectTo: "/rentals", pathMatch:"full" }
     ])
   ],
   providers: [],

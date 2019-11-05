@@ -7,7 +7,7 @@ import { apartments} from '../../../assets/apartments'
   styleUrls: ['./rental-list-item.component.css']
 })
 export class RentalListItemComponent implements OnInit {
-  @Input() apartment: any;
+  @Input() apartmentI: any;
   constructor() { }
 
   ngOnInit() {
