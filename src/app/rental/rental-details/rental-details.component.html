@@ -1,0 +1,10 @@
+<div *ngIf="rental" class="card bwm-card">
+  <img  src={{rental.image}} alt="">
+  <div >
+    <p >{{rental.name}}</p>
+    <p>{{rental.category}}</p>
+    <p>{{rental.city}}</p>
+    <p>Price per day: {{rental.dailyRate}} HRK</p>
+    <p>{{rental.description}}</p>
+  </div>
+</div>
