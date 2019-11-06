@@ -7,21 +7,25 @@ export class RentalService {
 
 
   public getRentals(): any {
-    const observable = new Observable((observer) =>{ //arrow funct is binding outer context to 'this' context
+    return new Observable<RentalModel[]>((observer) =>{ //arrow funct is binding outer context to 'this' context
       setTimeout(() => {
         observer.next(this.rentals)
-      }, 1000 );
-      setTimeout(() => {
-        observer.next("ErroOor")
-      }, 2000 );
-      setTimeout(() => {
-        observer.next("")
-      }, 3000 );
+      }, 500 );
     });
-    return observable;
   }
 
+  public getRentalById(rentalId: number): Observable<RentalModel>{
 
+    return new Observable<RentalModel>(observer  => {
+      setTimeout(() => {
+        const foundRental = this.rentals.find((rental) => {
+          return rental.id == rentalId;
+        })
+        observer.next(foundRental);
+      }, 500 );
+
+    })
+  }
   private rentals: RentalModel[] = [
     {
       name: "Los Angeles comfy room",
