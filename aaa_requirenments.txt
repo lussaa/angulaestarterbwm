@@ -1,0 +1,7 @@
+#samo za moju informaciju sto se sve trebalo instalirat
+//mongodb+srv://Test:<password>@cluster0-4wj8h.mongodb.net/test?retryWrites=true&w=majority
+
+unutar foldera aplikacije
+ npm install mongoose --save #za mongoDB, save znaci da ce se odma ukljucit u package.json
+ npm install express --save   #web framework for Node.js
+
