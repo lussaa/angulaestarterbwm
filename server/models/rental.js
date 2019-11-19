@@ -15,4 +15,4 @@ var rentalSchema = new Schema({
 });
 
 
-module.exports = mongoose.model('RentalModel',rentalSchema)
+module.exports = mongoose.model('Rental',rentalSchema)

@@ -1,6 +1,7 @@
+//not working
 const Rental = require('./models/rental')
 
-class Fakedb {
+class FakeDb {
   constructor() {
     this.rentals = [{
       title: "Nice view on ocean",
@@ -37,6 +38,20 @@ class Fakedb {
       }]
   }
 
+  cleanDb(){
+    Rental.remove({});
+  }
+  pushRentalsToDb(){
+    this.rentals.forEach((rental) => {
+      const newRental = new Rental(rental);
+      newRental.save();
+    })
+  }
+
+  seedDb(){
+    this.cleanDb();
+    this.pushRentalsToDb();
+  }
 }
-module.exports = new Fakedb;
-//export default Fakedb;
+//module.exports = new FakeDb;
+export default FakeDb;
