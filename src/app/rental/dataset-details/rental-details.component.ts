@@ -4,6 +4,7 @@ import {Observable} from "rxjs";
 import {logger} from "codelyzer/util/logger";
 import {RentalModel} from "../shared/rental-model";
 import {RentalService} from "../shared/rental.service";
+import {RentalService2} from "../shared/rental.service2";
 
 @Component({
   selector: 'bwm-rental-details',
@@ -14,7 +15,7 @@ export class RentalDetailsComponent implements OnInit {
   rental: RentalModel;
   id: string;
   idNum: number;
-  constructor(private routeParams: ActivatedRoute, private rentalService: RentalService) { }
+  constructor(private routeParams: ActivatedRoute, private rentalService: RentalService, private  rentalService2: RentalService2) { }
 
   ngOnInit() {
     this.routeParams.params.subscribe(
@@ -34,6 +35,15 @@ export class RentalDetailsComponent implements OnInit {
       () =>  {}
     );
 
+  }
+
+
+  showApiData() {
+    this.rentalService2.getConfig()
+      .subscribe((data: TovItem) => this.config = {
+        heroesUrl: data['heroesUrl'],
+        textfile:  data['textfile']
+      });
   }
 
 }

@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import {AppComponent} from "../app.component";
 import {RentalComponent} from "./rental.component";
 import {BrowserModule} from "@angular/platform-browser";
-import {RentalListComponent} from "./rental-list/rental-list.component";
-import {RentalListItemComponent} from "./rental-list-item/rental-list-item.component";
+import {RentalListComponent} from "./dataset-list/rental-list.component";
+import {RentalListItemComponent} from "./dataset-list-item/rental-list-item.component";
 import {CommonModule} from "@angular/common";
 import {RentalService} from "./shared/rental.service"; // service is a PROVIDE
 import {RouterModule, Routes} from "@angular/router";
-import { RentalDetailsComponent } from './rental-details/rental-details.component';
+import { RentalDetailsComponent } from './dataset-details/rental-details.component';
 
 const routes: Routes = [
   { path: 'rentals',

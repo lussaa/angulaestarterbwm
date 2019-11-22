@@ -13,6 +13,9 @@ router.get('/:_id', function(res, req) {
 
   const rentalId = res.params._id;
   Rental.findById(rentalId, function (err, foundRental) {
+    if (err) {
+      res.res.status("422").send({errors: [{title: "Wrong code ID error"}]});
+    }
     res.res.json(foundRental);
   });
 })

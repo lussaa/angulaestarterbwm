@@ -6,15 +6,19 @@ import { RentalModule } from "./rental/rental.module";
 import { AppComponent } from './app.component';
 import { RentalComponent } from './rental/rental.component';
 import {RouterModule, Routes} from "@angular/router";
+import {HttpClientModule} from "@angular/common/http";
+import { TovItemComponent } from './tov-item/tov-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    TovItemComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RentalModule,
     RouterModule.forRoot([
       { path: '', redirectTo: "/rentals", pathMatch:"full" }
